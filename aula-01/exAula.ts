@@ -1,3 +1,4 @@
+// Estrutura do ex
 // Crie uma interface Notificacao com as propriedades:
 
 // id: número identificador da notificação;
@@ -37,6 +38,7 @@ const inbox: Notificacao[] = [
     }
 ]
 
+// Funções declaradas
 // Crie uma função declarada chamada statusLeitura que receba uma notificação e retorne:
 // "✅ lida" se lida = true;
 // "📨 não lida" se lida = false.
@@ -49,3 +51,9 @@ function statusLeitura(notificacao: Notificacao): string {
         return "📨 não lida"
     }
 }
+
+// Funções anônimas
+// Crie uma função anônima atribuída a uma constante chamada marcarComoLida que receba o array de notificações e um id:
+// Se encontrar uma notificação com aquele id, altere lida para true e retorne uma mensagem de confirmação.
+// Se não encontrar, retorne "ID não encontrado".
+// Restrição: faça a comparação apenas com inbox[0], inbox[1] e inbox[2] (sem usar loops ainda).
