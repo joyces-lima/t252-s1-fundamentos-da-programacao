@@ -1,22 +1,4 @@
 {
-  "name": "t252-s1-fundamentos-da-programacao",
-  "version": "1.0.0",
-  "description": "oi, mina :)",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/minasprogramam/t252-s1-fundamentos-da-programacao.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/minasprogramam/t252-s1-fundamentos-da-programacao/issues"
-  },
-  "homepage": "https://github.com/minasprogramam/t252-s1-fundamentos-da-programacao#readme",
   "devDependencies": {
     "@types/node": "^24.5.2",
     "ts-node": "^10.9.2",
