@@ -93,7 +93,7 @@
 // 4. Funções Arrow Function
     // Adapte a função anterior para arrow function, mantendo a mesma lógica e mensagens.
 
-    const estiloAprendizado = (estudante: Estudante): string => {
+    const estiloAprendizado2 = (estudante: Estudante): string => {
         const media = mediaEstudante(estudante);
         if(media >= 7){
             return "Exploradora confiante.";

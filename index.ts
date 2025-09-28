@@ -100,6 +100,16 @@ const marcarComoLida = function (lista: Notificacao[], id: number): string {
   if (lista[1].id === id) { lista[1].lida = true; return `Notificação ${id} marcada como lida.`; }
   if (lista[2].id === id) { lista[2].lida = true; return `Notificação ${id} marcada como lida.`; }
 
+    // com for
+    // for (let i = 0; i < lista.length; i++) {
+    // a linha acima se le como: para cada i começando em 0, enquanto i for menor que o tamanho da lista, incrementa i em 1
+    // a gnt quer percorrer a lista inteira, por isso o i < lista.length
+    // executou o codigo dentro do for, depois volta pro i, incrementa em 1 e repete o processo
+    //     if (lista[i].id === id) {
+    //         lista[i].lida = true
+    //         return `Notificação ${id} marcada como lida.`
+    //     }
+    // }
   return "ID não encontrado";
 };
 
