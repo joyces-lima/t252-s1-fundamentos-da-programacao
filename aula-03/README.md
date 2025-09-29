@@ -7,8 +7,8 @@
 - [x] Objetos – como modelar informações usando chave/valor.
 - [x] Funções – como declarar e usar funções, incluindo funções anônimas e arrow functions.
 - [x] Escopo – como funciona o escopo de variáveis em diferentes contextos.
-- [ ] Loops e manipulação de arrays – como iterar sobre listas e usar métodos como for, for...of, forEach, map, filter.
-- [ ] Integração
+- [x] Loops e manipulação de arrays – como iterar sobre listas e usar métodos como for, for...of, forEach, map, filter.
+- [x] Integração
 
 ---
 
@@ -38,10 +38,10 @@ O sistema precisa:
 ## Direções
 1. Crie uma interface `RespostaPesquisa` com as propriedades mencionadas
 2. Crie um array `respostas` com pelo menos 5 respostas, incluindo algumas duplicadas.
-3. Crie uma função `buscarUsuario` que receba o array e um nome, e retorne a nota e comentário do usuário ou "Usuário não encontrado".
-4. Crie uma função `removerDuplicados` que receba o array e retorne um novo array sem respostas duplicadas.
-5. Crie uma funcao auxiliar `contarSatisfeitos` que receba o array sem duplicados e retorne a quantidade de notas ≥ 4.
-6. Crie uma funcao auxiliar `contarInsatisfeitos` que receba o array sem duplicados e retorne a quantidade de notas ≤ 2.
+3. Crie uma função `buscarUsuario` que receba o array e um nome, e retorne a nota e comentário do usuário ou "Usuário não encontrado". (utilize loop ou métodos de array)
+4. Crie uma função auxiliar `removerDuplicados` que receba o array e retorne um novo array sem respostas duplicadas. (utilize loop ou métodos de array)
+5. Crie uma funcao auxiliar `contarSatisfeitos` que receba o array sem duplicados e retorne a quantidade de notas ≥ 4. (utilize loop ou métodos de array)
+6. Crie uma funcao auxiliar `contarInsatisfeitos` que receba o array sem duplicados e retorne a quantidade de notas ≤ 2. (utilize loop ou métodos de array)
 7. Crie uma função principal `processarRespostas` que use as funções auxiliares para exibir o resumo completo.
 
 
