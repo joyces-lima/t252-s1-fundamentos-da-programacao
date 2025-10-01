@@ -125,6 +125,7 @@ function comandoAjuda (comando: "listar" | "ler" | "filtrar" | string): string {
 
 console.log("---- LISTAGEM ----");
 /// o TS entende que inbox pode ser vazio, por isso o "!" (non-null assertion), ele garante que não é nulo
+// O ! depois de [0] e [1] é um recurso do TypeScript. Ele diz ao compilador: "Eu, como programador(a), garanto que este valor não será null ou undefined neste ponto do código".
 // como se a gente dissesse pro TS: "confia em mim, eu sei o que estou fazendo esse valor não é nulo"
 console.log(inbox[0]!.id, inbox[0]!.titulo, inbox[0]!.tipo, statusLeitura(inbox[0]!));
 console.log(inbox[1]!.id, inbox[1]!.titulo, inbox[1]!.tipo, statusLeitura(inbox[1]!));

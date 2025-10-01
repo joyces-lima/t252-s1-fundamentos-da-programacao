@@ -9,7 +9,7 @@
             nome: string;
             cursoId: number;
             notas: [number, number, number];
-            mensagem?: string;
+            mensagem: string;
         }
 
         let estudante1: Estudante;
@@ -17,7 +17,7 @@
             nome: "Paula",
             cursoId: 1,
             notas: [5,7,8],
-            mensagem: 
+            mensagem: ""
         }
 
         let estudante2: Estudante;
@@ -25,7 +25,7 @@
             nome: "Ana",
             cursoId: 2,
             notas: [5,3,2],
-            mensagem: 
+            mensagem: ""
         }
 
         let estudante3: Estudante;
@@ -33,7 +33,7 @@
             nome: "Antonia",
             cursoId: 3,
             notas: [9,9,8],
-            mensagem: 
+            mensagem: ""
         }
 
     // Crie uma lista de cursos (array de objetos) contendo três cursos, cada um com:
@@ -67,8 +67,8 @@
     // Crie uma função declarada chamada mediaEstudante que receba um objeto estudante e retorne a média das notas, somando diretamente os três elementos do array, sem usar loops.
 
     function mediaEstudante (estudante: Estudante): number {
-        const somaDasNotas = (estudante.notas[0] + estudante.notas[1] + estudante.notas[2]);
-        return somaDasNotas / 3;
+        const media = (estudante.notas[0] + estudante.notas[1] + estudante.notas[2])/3;
+        return media;
     };
 
 // 3. Funções anônimas
@@ -81,11 +81,9 @@
         const media = mediaEstudante(estudante);
         if(media >= 7){
             return "Exploradora confiante.";
-        } 
-        if(media >= 5) {
+        } else if(media >= 5) {
             return "Brilha como aprendiz.";
-        } 
-        else {
+        } else {
             return "Desbravando a programação.";
         }
         };
@@ -97,8 +95,7 @@
         const media = mediaEstudante(estudante);
         if(media >= 7){
             return "Exploradora confiante.";
-        } 
-        else if(media >= 5) {
+        } else if(media >= 5) {
             return "Brilha como aprendiz.";
         } else {
             return "Desbravando a programação.";
@@ -108,11 +105,8 @@
 // 5. Switch case
     // Use switch/case para imprimir o nome de um curso, usando a propriedade cursoId como referência à lista de cursos.
 
-        switch (listaDeCursos) {
-            case 1:
-                console.log("TypeScript") ;
-                break;
-        }
+    
+
         // Ainda tenho dificuldade com o Switch case, não consegui resolver essa parte do desafio. Uma dúvida que me surgiu é se devo criar uma função e depois chamar o Switch? 
 
 // 6. Exibição
