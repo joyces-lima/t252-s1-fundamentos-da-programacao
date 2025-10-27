@@ -9,12 +9,12 @@
 // 🏆 Campeão: título e nota
 // 🥈 Vice-campeão: título e nota
 
-type Filmes = {
+type Filme = {
     titulo: string;
     nota: number;
 };
 
-const filmes: Filmes[] = [
+const filmes: Filme[] = [
     { titulo: "Mulan", nota: 9 },
     { titulo: "Matilda - O musical", nota: 10 },
     { titulo: "O Rei do Show", nota: 9 },
@@ -25,28 +25,29 @@ const filmes: Filmes[] = [
     { titulo: "O Rei Leão", nota: 9 },
 ];
 
-// Primeira Partida
-// Os filmes do início da lista competem com os filmes do final.
-// Para cada confronto, o filme com a nota mais alta avança para a próxima fase.
-// Em caso de empate, o vencedor será definido pela ordem alfabética do título.
-
 // Função auxiliar
-function decidirVencedor(filmeA: Filmes, filmeB: Filmes): Filmes {
+function decidirVencedor(filmeA: Filme, filmeB: Filme): Filme {
     if (filmeA.nota > filmeB.nota) {
         return filmeA
     } else if (filmeB.nota > filmeA.nota) {
         return filmeB
     } else {
-        return filmeA.titulo < filmeB.titulo ? filmeA : filmeB;
+        // return filmeA.titulo < filmeB.titulo ? filmeA : filmeB;
+        // com localeCompare (Feito em aula)
+        return filmeA.titulo.localeCompare(filmeB.titulo) < 0 ? filmeA : filmeB;
     }
 };
 
-const vencedoresPrimeiraFase: Filmes[] = [];
-const numeroDePartidas = filmes.length / 2;
+// Primeira Partida
+// Os filmes do início da lista competem com os filmes do final.
+// Para cada confronto, o filme com a nota mais alta avança para a próxima fase.
+// Em caso de empate, o vencedor será definido pela ordem alfabética do título.
 
-for (let i = 0; i < numeroDePartidas; i++) {
+const vencedoresPrimeiraFase: Filme[] = [];
+
+for (let i = 0; i < filmes.length / 2; i++) {
     const filme1 = filmes[i];
-    const filme2 = filmes[filmes.length - 1 - i];
+    const filme2 = filmes[filmes.length - i - 1];
 
     if (filme1 && filme2) {
         const vencedor = decidirVencedor(filme1, filme2);
@@ -54,14 +55,29 @@ for (let i = 0; i < numeroDePartidas; i++) {
     }
 }
 
+// Escrevendo na função (Feito em aula)
+// function primeiraFase(filmes: Filme[]): Filme[] {
+//     for (let i = 0; i < filmes.length / 2; i++) {
+//         const primeiroFilme = filmes[i];
+//         const ultimoFilme = filmes[filmes.length - i - 1];
+//         let vencedores: Filme[] = []
+
+//         let comparadorFilmes = decidirVencedor(primeiroFilme, ultimoFilme)
+//         vencedores.push(comparardorFilmes)
+//     }
+//     return vencedores
+// }
+
+
+
 console.log("Vencedores da Primeira Partida:", vencedoresPrimeiraFase);
 
 // Segunda partida (semifinal):
 // Os vencedores da primeira fase competem entre si, em duplas consecutivas da lista.
 // A mesma regra de comparação de notas e desempate por ordem alfabética se aplica.
 
-const vencedoresSemifinal: Filmes[] = [];
-// O loop incrementa `i` de 2 em 2 (i += 2) porque, a cada iteração,
+const vencedoresSemifinal: Filme[] = [];
+// O loop incrementa `i` de 2 em 2 (i += 2) porque, a cada interação,
 // processamos um par de filmes (filme1 e filme2) para o confronto.
 // Isso garante que peguemos as duplas corretas (índice 0 vs 1, depois 2 vs 3, etc.).
 for (let i = 0; i < vencedoresPrimeiraFase.length; i += 2) {

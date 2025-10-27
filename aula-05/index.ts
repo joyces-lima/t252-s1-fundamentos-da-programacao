@@ -63,7 +63,8 @@ let filtrarFilterEstudantesAtivas = estudantes.filter((estudante, index, array) 
 console.log(filtrarFilterEstudantesAtivas)
 
 // Operadores Ternários
-// Operadores ternários são atalhos de código para instruções if/else simples, usando a sintaxe condição ? [2]expressão_verdadeira : expressão_falsa. Eles avaliam uma condição e retornam um valor de uma entre duas expressões, sendo úteis para tornar o código mais limpo e conciso ao atribuir valores a variáveis ou expressar lógica condicional. 
+// Operadores ternários são atalhos de código para instruções if/else simples, usando a sintaxe condição ? [2]expressão_verdadeira : expressão_falsa.
+// Eles avaliam uma condição e retornam um valor de uma entre duas expressões, sendo úteis para tornar o código mais limpo e conciso ao atribuir valores a variáveis ou expressar lógica condicional. 
 // Como funciona
 // Condição: A primeira parte do operador é uma expressão que é avaliada como verdadeira ou falsa. 
 // Ponto de interrogação (?): Separa a condição das expressões. 
@@ -101,3 +102,7 @@ let filterEMap = estudantes.filter(estudante => estudante.isActive == true && es
     }
 })
 console.log(filterEMap)
+
+// Metodo Reduce
+// Usado quando queremos acumular (somar) resultados da lista => Ex: Se por acaso 
+// eu queira somar todos os valores de faturas do meu cartão
